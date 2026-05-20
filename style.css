@@ -10,6 +10,7 @@
 }
 body {
   width: 100vw;
+  position: relative;
   background-color: black;
 }
 header {
@@ -80,7 +81,17 @@ header {
     padding: 5px;
     border-radius: 10px;
 }
-.texto2 {
+.vrm1 {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.vrm2 {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.texto2, .texto3 {
     margin-top: 40px;
     font-size: 24px;
     display: flex;
@@ -92,52 +103,102 @@ header {
     width: 40px;
         margin-bottom: 20px;
 }
-.texto2 span {
+.texto2 span,.texto3 span {
     color: #e0c43b;
 }
 .texto2>h2 {
     color: #EFE5BE;
         margin-bottom: 10px;
 }
-.todos {
-    margin-top: 40px;
-    display: flex;
-    border: 2px solid white;
-     width:920px;
-     align-items: flex-start;
-     margin-left: 40px;
+.todos  {
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+
 }
 .bor {
- border: 2px solid white; 
- border-left: none;
+  display: flex;  
+ border: 2px solid white;
+ flex-direction: row  ;
+ width: fit-content;
+ 
+ 
+}
+
+.orgnz-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #000;
 }
 .pessoa {
     margin-top: 20px;
     gap: 10px; 
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
     font-size: 20px;
     flex-direction: row;
     text-align: left;
-}
-.pessoa> h3 {
     height: 20px;
+    margin-bottom: 20px;
 }
+
 .pessoa> i {
     height: 24px;
     border: 1px solid wheat;
     color: white;
+
 }
-.pessoa>img {
+.pessoa img {
     height: 30px;   
 
 }
-.bor>p {
-    text-align: left, end;
-    width:689px;
+.orçamento {
+  margin-left: 110px;
+  border: 2px solid #dfc025;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: #ffffff;
+   transition-duration:0.5s ;
+}
+.orçamento:hover {
+  transition-duration:0.5s ;
+  background-color: #dfc025;
+  transform: scale(1.10);
+}
+.orgnz-text>p {
+    width:500px;
+
 }
 .mulher-img {
+  filter: grayscale(100%);
     height: 300px;
     margin-right: 20px;
-    
+    transition: 0.5s;
 }
+ .mulher-img:hover {
+  filter: none;
+  transition: 0.5s;
+}
+.texto3>p {
+  margin-bottom: 20px;
+}
+.arte {
+  display: grid;
+   grid-template-columns: auto auto auto;
+   padding: 10px;
+   width: 100vw;
+   justify-content: space-around;
+}
+.arte>img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px #535353;
+  margin-top: 30px;
+  position: relative;
+}
+
