@@ -91,8 +91,8 @@ header {
   right: 0;
   z-index: -1;
 }
-.texto2, .texto3 {
-    margin-top: 40px;
+.texto2, .texto3,.texto4,.texto5 {
+    margin-top: 50px;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ header {
     width: 40px;
         margin-bottom: 20px;
 }
-.texto2 span,.texto3 span {
+.texto2 span,.texto3 span, .texto4  span, .texto5 span {
     color: #e0c43b;
 }
 .texto2>h2 {
@@ -191,8 +191,9 @@ header {
    padding: 10px;
    width: 100vw;
    justify-content: space-around;
+   margin-bottom: 30px;
 }
-.arte>img {
+.arte>img, .pre-img>img {
   object-fit: cover;
   width: 400px;
   height: 400px;
@@ -201,4 +202,17 @@ header {
   margin-top: 30px;
   position: relative;
 }
-
+.img-right {
+  transform: scalex(-1);
+}
+.pre-img {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  
+}
+.pre-img > img:last-child:nth-child(3n + 1) {
+  grid-column: 2; /* coloca na coluna do meio */
+}
