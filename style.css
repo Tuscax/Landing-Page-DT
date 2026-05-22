@@ -80,6 +80,12 @@ header {
     color: #EFE5BE;
     padding: 5px;
     border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.texto1 >a:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+  
 }
 .vrm1 {
   position: absolute;
@@ -91,7 +97,7 @@ header {
   right: 0;
   z-index: -1;
 }
-.texto2, .texto3,.texto4,.texto5 {
+.texto2, .texto3,.texto4,.texto5,.texto6 {
     margin-top: 50px;
     font-size: 24px;
     display: flex;
@@ -103,7 +109,7 @@ header {
     width: 40px;
         margin-bottom: 20px;
 }
-.texto2 span,.texto3 span, .texto4  span, .texto5 span {
+.texto2 span,.texto3 span, .texto4  span, .texto5 span, .texto6 span {
     color: #e0c43b;
 }
 .texto2>h2 {
@@ -193,14 +199,31 @@ header {
    justify-content: space-around;
    margin-bottom: 30px;
 }
-.arte>img, .pre-img>img {
+.relative {
+  position: relative;
+}
+.bg-preto {
+  width: 400px;
+  height: 400px;
+  border-radius: 16px;
+  background-color: transparent;
+  opacity: 60%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 30px;
+  transition-duration: 0.5s;
+}
+.bg-preto:hover {
+  background-color: #000;
+  transition-duration: 0.5s;
+}
+.arte img, .pre-img img {
   object-fit: cover;
   width: 400px;
   height: 400px;
   border-radius: 16px;
   box-shadow: 0 10px 15px -3px #535353;
   margin-top: 30px;
-  position: relative;
 }
 .img-right {
   transform: scalex(-1);
@@ -215,4 +238,47 @@ header {
 }
 .pre-img > img:last-child:nth-child(3n + 1) {
   grid-column: 2; /* coloca na coluna do meio */
+}
+.flex {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+}
+.endereço, .what {
+  border: 2px solid white;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+}
+.img-texto {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.endereço h3 {
+  font-size: 36px;
+}
+.endereço img, .what img {
+  height: 48px;
+}
+.texto-p {
+  margin-top: 20px;
+  font-size: 24px   ;
+}
+.what button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #dfc025;
+  font-size: 24px;
+  transition-duration: 0.5s;
+}
+.what button:hover {
+  transform: scale(1.05);
+  background-color: #bea731;
+  transition-duration: 0.5s;
 }
